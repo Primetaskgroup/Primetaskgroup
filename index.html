@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Task Group - Möbelaufbau, Umzugshilfe & Montageservice in Köln</title>
+    <meta name="description" content="Professionelle Hilfe für Möbelaufbau, Wandmontagen, Umzüge und Transporte in Köln. Schnell, zuverlässig und zu fairen Preisen. Jetzt anrufen!">
+    <meta name="keywords" content="Möbelaufbau Köln, IKEA Möbel Aufbau Köln, Umzugshilfe Köln, TV Wandmontage Köln, Handwerker Service Köln, Wandmontage Köln, Transportservice Köln, Müllentsorgung Köln">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e3a8a",
+                        secondary: "#000000",
+                        accent: "#3b82f6"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <i class="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-secondary">Prime Task Group</h1>
+                        <p class="text-xs text-gray-500">Köln, Deutschland</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8" id="desktop-nav"></div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="tel:017662792171" class="bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-800 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span>01766 279 2171</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-nav" class="hidden md:hidden mt-4 pb-4 border-t pt-4"></div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-blue-900 text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Möbelaufbau, Umzugshilfe & Montageservice in Köln</h1>
+                <p class="text-xl mb-10 text-blue-100">Schnelle, zuverlässige und professionelle Hilfe für Möbelaufbau, Wandmontagen, Umzüge und Transporte.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:017662792171" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span>Jetzt anrufen</span>
+                    </a>
+                    <a href="#contact" class="bg-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition-colors flex items-center justify-center space-x-2">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Kostenloses Angebot anfragen</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-secondary">Unsere Dienstleistungen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid"></div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-secondary">Warum Prime Task Group?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6" id="benefits-grid"></div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-secondary">So funktioniert es</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="steps-grid"></div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Einsatzgebiet</h2>
+            <p class="text-2xl mb-4">Köln und Umgebung</p>
+            <p class="text-xl text-blue-100">Wir sind für Sie da in ganz Köln und dem Umland</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-secondary">Kontaktieren Sie uns</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-secondary">Prime Task Group</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Standort</h4>
+                                    <p class="text-gray-600">Köln, Deutschland</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Telefon</h4>
+                                    <a href="tel:017662792171" class="text-primary hover:text-blue-700 text-lg font-medium">01766 279 2171</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">E-Mail</h4>
+                                    <a href="mailto:primetaskgroup@gmail.com" class="text-primary hover:text-blue-700">primetaskgroup@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 pt-8 border-t">
+                            <h4 class="font-bold text-lg mb-4">Direkt Kontakt aufnehmen:</h4>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="tel:017662792171" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors flex items-center justify-center space-x-2">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Anrufen</span>
+                                </a>
+                                <a href="https://wa.me/4917662792171" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center space-x-2">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-secondary">Angebot anfragen</h3>
+                    <form action="https://formspree.io/f/xyknwbld" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Name *</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Telefon *</label>
+                                <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2">E-Mail *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2">Dienstleistung</label>
+                            <select name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Bitte auswählen</option>
+                                <option value="möbelaufbau">Möbelaufbau</option>
+                                <option value="wandmontage">Wandmontage</option>
+                                <option value="umzugshilfe">Umzugshilfe</option>
+                                <option value="transport">Transportservice</option>
+                                <option value="müllentsorgung">Müllentsorgung</option>
+                                <option value="handwerker">Handwerkerarbeiten</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2">Nachricht *</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-colors">
+                            Kostenloses Angebot anfordern
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-tools text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Prime Task Group</h3>
+                            <p class="text-sm text-gray-300">Köln, Deutschland</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">Professionelle Dienstleistungen für Möbelaufbau, Umzugshilfe und Montagearbeiten in Köln und Umgebung.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Dienstleistungen</h4>
+                    <ul class="space-y-3" id="footer-services"></ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Kontakt</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-gray-300"></i>
+                            <a href="tel:017662792171" class="hover:text-white transition-colors">01766 279 2171</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-gray-300"></i>
+                            <a href="mailto:primetaskgroup@gmail.com" class="hover:text-white transition-colors">primetaskgroup@gmail.com</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-gray-300"></i>
+                            <span>Köln, Deutschland</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-bold mb-4">Folgen Sie uns</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Prime Task Group. Alle Rechte vorbehalten.</p>
+                <p class="mt-2 text-sm">Möbelaufbau | Umzugshilfe | Wandmontagen | Transport | Müllentsorgung</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <a href="tel:017662792171" class="fixed bottom-6 right-6 w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-700 transition-colors z-40">
+        <i class="fas fa-phone text-2xl"></i>
+    </a>
+
+    <script>
+        // Data Layer
+        const navigationItems = [
+            { "label": "Start", "href": "#hero" },
+            { "label": "Dienstleistungen", "href": "#services" },
+            { "label": "Warum wir", "href": "#why-us" },
+            { "label": "So funktioniert's", "href": "#how-it-works" },
+            { "label": "Kontakt", "href": "#contact" }
+        ];
+
+        const services = [
+            { 
+                "icon": "fas fa-couch", 
+                "title": "Möbelaufbau", 
+                "description": "Professioneller Aufbau von IKEA Möbeln, Schränken, Betten und Kommoden.",
+                "image": "https://picsum.photos/400/300?random=1",
+                "alt": "Möbelaufbau Service in Köln"
+            },
+            { 
+                "icon": "fas fa-tv", 
+                "title": "Wandmontage", 
+                "description": "Montage von Fernsehern, Regalen, Spiegeln und Gardinenstangen.",
+                "image": "https://picsum.photos/400/300?random=2",
+                "alt": "TV Wandmontage in Köln"
+            },
+            { 
+                "icon": "fas fa-truck-moving", 
+                "title": "Umzugshilfe", 
+                "description": "Zuverlässige Hilfe beim Tragen, Laden und Entladen bei Umzügen.",
+                "image": "https://picsum.photos/400/300?random=3",
+                "alt": "Umzugshilfe Service Köln"
+            },
+            { 
+                "icon": "fas fa-trailer", 
+                "title": "Transportservice", 
+                "description": "Transport von Möbeln und Gegenständen mit Anhänger.",
+                "image": "https://picsum.photos/400/300?random=4",
+                "alt": "Transportservice mit Anhänger Köln"
+            },
+            { 
+                "icon": "fas fa-trash-alt", 
+                "title": "Müllentsorgung", 
+                "description": "Schnelle Abholung und Entsorgung von Möbeln, Sperrmüll und anderen Gegenständen.",
+                "image": "https://picsum.photos/400/300?random=5",
+                "alt": "Müllentsorgung Köln"
+            },
+            { 
+                "icon": "fas fa-tools", 
+                "title": "Handwerkerarbeiten", 
+                "description": "Kleine Handwerkerarbeiten und Haushaltshilfe in Köln.",
+                "image": "https://picsum.photos/400/300?random=6",
+                "alt": "Handwerker Service Köln"
+            }
+        ];
+
+        const benefits = [
+            { "icon": "fas fa-clock", "title": "Zuverlässig und pünktlich", "description": "Wir halten Termine ein" },
+            { "icon": "fas fa-euro-sign", "title": "Faire Preise", "description": "Transparente Kosten" },
+            { "icon": "fas fa-toolbox", "title": "Professionelles Werkzeug", "description": "Modernes Equipment" },
+            { "icon": "fas fa-calendar-check", "title": "Schnelle Terminvergabe", "description": "Flexible Verfügbarkeit" },
+            { "icon": "fas fa-map-marker-alt", "title": "Service in Köln", "description": "Und Umgebung" }
+        ];
+
+        const steps = [
+            { 
+                "number": "1", 
+                "title": "Kontakt aufnehmen", 
+                "description": "Rufen Sie uns an oder senden Sie eine Anfrage über das Kontaktformular.",
+                "icon": "fas fa-phone"
+            },
+            { 
+                "number": "2", 
+                "title": "Schnelles Angebot erhalten", 
+                "description": "Wir erstellen Ihnen umgehend ein unverbindliches Angebot.",
+                "icon": "fas fa-file-invoice-dollar"
+            },
+            { 
+                "number": "3", 
+                "title": "Auftrag erledigt", 
+                "description": "Wir erledigen Ihren Auftrag schnell und professionell.",
+                "icon": "fas fa-check-circle"
+            }
+        ];
+
+        const footerServices = [
+            { "label": "Möbelaufbau Köln", "href": "#services" },
+            { "label": "IKEA Aufbau", "href": "#services" },
+            { "label": "Umzugshilfe", "href": "#services" },
+            { "label": "TV Montage", "href": "#services" },
+            { "label": "Transportservice", "href": "#services" },
+            { "label": "Müllentsorgung", "href": "#services" }
+        ];
+
+        // Reusable Render Functions
+        function renderNavigation(items) {
+            return items.map(item => 
+                `<a href="${item.href}" class="text-gray-700 hover:text-primary font-medium transition-colors nav-link">${item.label}</a>`
+            ).join("");
+        }
+
+        function renderServices(items) {
+            return items.map(item => `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="${item.image}" alt="${item.alt}" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                            <i class="${item.icon} text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-secondary">${item.title}</h3>
+                        <p class="text-gray-600">${item.description}</p>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function renderBenefits(items) {
+            return items.map(item => `
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="${item.icon} text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">${item.title}</h4>
+                    <p class="text-gray-600">${item.description}</p>
+                </div>
+            `).join("");
+        }
+
+        function renderSteps(items) {
+            return items.map(item => `
+                <div class="text-center">
+                    <div class="relative">
+                        <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">
+                            ${item.number}
+                        </div>
+                        <div class="absolute top-10 left-1/2 w-full h-0.5 bg-gray-200 hidden md:block"></div>
+                    </div>
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="${item.icon} text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-secondary">${item.title}</h3>
+                    <p class="text-gray-600">${item.description}</p>
+                </div>
+            `).join("");
+        }
+
+        function renderFooterServices(items) {
+            return items.map(item => 
+                `<li><a href="${item.href}" class="text-gray-300 hover:text-white transition-colors">${item.label}</a></li>`
+            ).join("");
+        }
+
+        // Initialize Page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render navigation
+            document.getElementById('desktop-nav').innerHTML = renderNavigation(navigationItems);
+            document.getElementById('mobile-nav').innerHTML = renderNavigation(navigationItems);
+            
+            // Render services
+            document.getElementById('services-grid').innerHTML = renderServices(services);
+            
+            // Render benefits
+            document.getElementById('benefits-grid').innerHTML = renderBenefits(benefits);
+            
+            // Render steps
+            document.getElementById('steps-grid').innerHTML = renderSteps(steps);
+            
+            // Render footer services
+            document.getElementById('footer-services').innerHTML = renderFooterServices(footerServices);
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileNav = document.getElementById('mobile-nav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileNav.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileNav.classList.contains('hidden')) {
+                    icon.className = 'fas fa-bars text-2xl';
+                } else {
+                    icon.className = 'fas fa-times text-2xl';
+                }
+            });
+            
+            // Smooth scrolling for navigation links
+            document.addEventListener('click', function(event) {
+                const link = event.target.closest('.nav-link');
+                if (!link) return;
+                
+                event.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    mobileNav.classList.add('hidden');
+                    mobileMenuBtn.querySelector('i').className = 'fas fa-bars text-2xl';
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+            
+        
+            
+            // Add active class to current section in navigation
+            function updateActiveNav() {
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let currentSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        currentSection = section.id;
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary', 'font-semibold');
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('text-primary', 'font-semibold');
+                    }
+                });
+            }
+            
+            // Update active nav on scroll
+            window.addEventListener('scroll', updateActiveNav);
+            updateActiveNav(); // Initial call
+        });
+    </script>
+</body>
+</html>
